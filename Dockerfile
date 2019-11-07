@@ -1,11 +1,11 @@
 FROM registry.access.redhat.com/ubi8/nodejs-10
 
-WORKDIR /opt/app-root
+WORKDIR /10/app/
 COPY package*.json ./
 RUN npm install
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 3000
 
 CMD [ "npm", "start" ]
